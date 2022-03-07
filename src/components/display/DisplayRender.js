@@ -4,7 +4,7 @@ import React from 'react'
 const DisplayRender = ({}) => {
   return (
     <View>
-      <Text>DisplayRender</Text>
+      <Text></Text>
     </View>
   )
 }
