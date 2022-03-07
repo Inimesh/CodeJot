@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Display /> renders correctly 1`] = `
+<View>
+  <TextInput
+    allowFontScaling={true}
+    defaultValue=""
+    onChangeText={[Function]}
+    placeholder="Type to start coding!"
+    rejectResponderTermination={true}
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
