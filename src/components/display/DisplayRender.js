@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const DisplayRender = ({}) => {
+const DisplayRender = ({ text }) => {
   return (
     <View>
-      <Text></Text>
+      <Text>{text}</Text>
     </View>
   )
 }
