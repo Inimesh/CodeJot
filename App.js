@@ -1,14 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, SafeAreaView, Platform, StatusBar } from 'react-native';
 
 import Editor from './src/components/editor/Editor';
 
 const App = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Editor />
-      <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -17,8 +15,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginLeft: 12,
+    marginRight: 12,
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
   },
 });
 
