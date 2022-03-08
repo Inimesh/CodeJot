@@ -9,4 +9,4 @@ describe('<Display />', () => {
     expect(tree).toMatchSnapshot();
   })
 
- })
+})

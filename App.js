@@ -5,7 +5,8 @@ import Editor from './src/components/editor/Editor';
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Editor />
+      {/* selection for language */}
+      <Editor /> {/* prop: synHighlight={stylesheet object} */}
     </SafeAreaView>
   );
 }

@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { View, TextInput, StyleSheet } from 'react-native'
 
 
-const Editor = () => {
+const Editor = () => { // { synHighlight }
   const [text, setText] = useState("")
 
   return (
     <View style={styles.editorWindow}>
-      <TextInput style={styles.input}
+      <TextInput style={styles.textField} // In an array append a synHighlight styleSheet object that is passed as props
       placeholder='Type to start coding!'
       onChangeText={newText => setText(newText)}
       multiline
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     borderWidth: 1,
   },
-  input: {
+  textField: {
     backgroundColor: "#fff"
   }
 })
