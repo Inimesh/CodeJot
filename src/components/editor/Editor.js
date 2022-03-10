@@ -20,6 +20,9 @@ const Editor = () => { // { synHighlight }
 
 const styles = StyleSheet.create({
   editorWindow: {
+    borderRadius: 4,
+    marginLeft: 12,
+    marginRight: 12,
     paddingLeft: 12,
     paddingRight: 12,
     backgroundColor: "red",
