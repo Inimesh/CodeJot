@@ -4,16 +4,16 @@ import { View, StyleSheet, TextInput } from 'react-native'
 
 const EditorContainer = () => { // { synHighlight }
 
-  const [text, setText] = useState("")
+  const [code, setCode] = useState("")
   
   return (
     <View style={styles.editorWindow}>
       <TextInput style={styles.textField} // In an array append a synHighlight styleSheet object that is passed as props
       placeholder='Type to start coding!'
-      onChangeText={newText => setText(newText)}
-      multiline
+      onChangeText={newCode => setCode(newCode)}
+      multiline={true}
       textAlign='left'
-      defaultValue={text}
+      defaultValue={code}
       />
     </View>
   )
