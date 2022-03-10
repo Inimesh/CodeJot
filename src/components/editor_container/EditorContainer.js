@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { View, TextInput, StyleSheet } from 'react-native'
+import { View, StyleSheet, TextInput } from 'react-native'
 
 
-const Editor = () => { // { synHighlight }
+const EditorContainer = () => { // { synHighlight }
+
   const [text, setText] = useState("")
-
+  
   return (
     <View style={styles.editorWindow}>
       <TextInput style={styles.textField} // In an array append a synHighlight styleSheet object that is passed as props
@@ -32,4 +33,4 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff"
   }
 })
-export default Editor
+export default EditorContainer

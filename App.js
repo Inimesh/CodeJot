@@ -1,19 +1,19 @@
 import { StyleSheet, SafeAreaView, Platform, StatusBar } from 'react-native';
 
-import Editor from './src/components/editor/Editor';
+import EditorContainer from './src/components/editor_container/EditorContainer';
 // selection for language
 // prop: synHighlight={stylesheet object}
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}> 
-      <Editor /> 
+    <SafeAreaView style={styles.app}> 
+      <EditorContainer /> 
     </SafeAreaView>
   );
 }
 
 
 const styles = StyleSheet.create({
-  container: {
+  app: {
     flex: 1,
     backgroundColor: '#fff',
     marginLeft: 12,
