@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, TextInput } from 'react-native'
-
+import { View, StyleSheet, TextInput, Text } from 'react-native'
+import SyntaxHighlighter from 'react-native-syntax-highlighter';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const EditorContainer = () => { // { synHighlight }
 
   const [code, setCode] = useState("")
-  
+
   return (
     <View style={styles.editorWindow}>
       <TextInput style={styles.textField} // In an array append a synHighlight styleSheet object that is passed as props
@@ -15,6 +16,9 @@ const EditorContainer = () => { // { synHighlight }
       textAlign='left'
       defaultValue={code}
       />
+      <SyntaxHighlighter language='javascript' highlighter="hljs">
+        {code}
+      </SyntaxHighlighter>
     </View>
   )
 }
@@ -33,4 +37,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff"
   }
 })
+
 export default EditorContainer

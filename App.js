@@ -1,4 +1,4 @@
-import { StyleSheet, SafeAreaView, Platform, StatusBar } from 'react-native';
+import { StyleSheet, SafeAreaView, Platform, StatusBar, Text } from 'react-native';
 
 import EditorContainer from './src/components/editor_container/EditorContainer';
 // selection for language
