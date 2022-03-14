@@ -31,10 +31,11 @@ const EditorContainer = () => { // { synHighlight }
       multiline={true}
       numberOfLines={10}
       textAlign='left'
+      textAlignVertical='top'
       defaultValue={code}
       />
       <SyntaxHighlighter language='javascript' highlighter="hljs" style={docco}>
-        {codeExample}
+        {code}
       </SyntaxHighlighter>
     </View>
   )
@@ -44,14 +45,19 @@ const styles = StyleSheet.create({
   editorWindow: {
     marginLeft: 12,
     marginRight: 12,
+    marginTop: 12,
+    marginBottom: 12,
     borderWidth: 1,
     borderRadius: 4,
-    backgroundColor: "red",
+    // backgroundColor: "red",
   },
   textField: {
     backgroundColor: "#fff",
     paddingLeft: 6,
-    paddingRight: 12,
+    paddingRight: 6,
+    paddingTop: 6,
+    paddingBottom: 6,
+    borderRadius: 4,
   }
 })
 
