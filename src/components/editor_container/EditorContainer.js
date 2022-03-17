@@ -1,27 +1,12 @@
 import React, { useState } from 'react'
 import { View, StyleSheet, TextInput, Text } from 'react-native'
 import SyntaxHighlighter from 'react-native-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
-const EditorContainer = () => { // { synHighlight }
+const EditorContainer = ({ language }) => { // { synHighlight }
 
   const [code, setCode] = useState("");
 
-  const codeExample = 
-  `
-  import React, { useState } from "react";
-  function Example() {
-    const [count, setCount] = useState(0);
-    return (
-      <div>
-        <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-          Click me
-        </button>
-      </div>
-    );
-  }
-  `
   return (
     <View style={styles.editorWindow}>
       <TextInput style={styles.textField}
@@ -34,7 +19,7 @@ const EditorContainer = () => { // { synHighlight }
       textAlignVertical='top'
       defaultValue={code}
       />
-      <SyntaxHighlighter language='javascript' highlighter="hljs" style={docco}>
+      <SyntaxHighlighter language={language} highlighter="hljs" style={docco}>
         {code}
       </SyntaxHighlighter>
     </View>

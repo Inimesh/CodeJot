@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Display /> renders components correctly 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 4,
+      "borderWidth": 1,
+      "marginBottom": 12,
+      "marginLeft": 12,
+      "marginRight": 12,
+      "marginTop": 12,
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCapitalize="none"
+    defaultValue=""
+    multiline={true}
+    numberOfLines={10}
+    onChangeText={[Function]}
+    placeholder="Type to start coding!"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 4,
+        "paddingBottom": 6,
+        "paddingLeft": 6,
+        "paddingRight": 6,
+        "paddingTop": 6,
+      }
+    }
+    textAlign="left"
+    textAlignVertical="top"
+    underlineColorAndroid="transparent"
+  />
+  <RCTScrollView
+    horizontal={true}
+    style={
+      Object {
+        "backgroundColor": "#f8f8ff",
+        "overflow": "scroll",
+        "padding": 8,
+      }
+    }
+  >
+    <View>
+      <RCTScrollView>
+        <View>
+          <Text
+            style={
+              Object {
+                "color": "#000",
+                "fontFamily": "Menlo-Regular",
+                "fontSize": 12,
+                "height": 17,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "fontFamily": "Menlo-Regular",
+                  "fontSize": 12,
+                  "height": 17,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "Menlo-Regular",
+                    "fontSize": 12,
+                    "height": 17,
+                  }
+                }
+              >
+                
+              </Text>
+            </Text>
+          </Text>
+        </View>
+      </RCTScrollView>
+    </View>
+  </RCTScrollView>
+</View>
+`;
