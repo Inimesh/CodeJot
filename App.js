@@ -15,6 +15,14 @@ const App = () => {
       label: 'Python',
       value: 'python'
     },
+    {
+      label: 'Ruby',
+      value: 'ruby'
+    },
+    {
+      label: 'JSON',
+      value: 'json'
+    },
   ]
 
   return (
