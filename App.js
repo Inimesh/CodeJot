@@ -1,18 +1,46 @@
-import { StyleSheet, SafeAreaView, Platform, StatusBar } from 'react-native';
-
-import Editor from './src/components/editor/Editor';
+import { StyleSheet, SafeAreaView, Platform, StatusBar, Text } from 'react-native';
+import React, { useState } from 'react';
+import { Dropdown } from 'react-native-material-dropdown-v2';
+import EditorContainer from './src/components/editor_container/EditorContainer';
 
 const App = () => {
+  [language, setLanguage] = useState('javascript')
+
+  let availableLanguages = [
+    {
+      label: 'JavaScript',
+      value: 'javascript'
+    },
+    {
+      label: 'Python',
+      value: 'python'
+    },
+    {
+      label: 'Ruby',
+      value: 'ruby'
+    },
+    {
+      label: 'JSON',
+      value: 'json'
+    },
+  ]
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Editor />
+    <SafeAreaView style={styles.app}> 
+      <Dropdown 
+        label='Select Language' 
+        data={availableLanguages}
+        onChangeText={(newLang) => setLanguage(newLang)}
+        dropdownPosition={0}
+      />
+      <EditorContainer language={language} /> 
     </SafeAreaView>
   );
 }
 
 
 const styles = StyleSheet.create({
-  container: {
+  app: {
     flex: 1,
     backgroundColor: '#fff',
     marginLeft: 12,
