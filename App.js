@@ -31,6 +31,7 @@ const App = () => {
         label='Select Language' 
         data={availableLanguages}
         onChangeText={(newLang) => setLanguage(newLang)}
+        dropdownPosition={0}
       />
       <EditorContainer language={language} /> 
     </SafeAreaView>
