@@ -3,13 +3,16 @@ import { View, StyleSheet, TextInput, Text } from 'react-native'
 import SyntaxHighlighter from 'react-native-syntax-highlighter';
 import { docco, dark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
-const EditorContainer = ({ language }) => { // { synHighlight }
+const EditorContainer = ({ language }) => {
 
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState("def funct(): return True");
 
   return (
     <View style={styles.editorWindow}>
-      <TextInput style={styles.codeInputOutput}
+      <SyntaxHighlighter language={language} highlighter="hljs" style={docco} customStyle={[styles.codeInputOutput, styles.codeOutput]}>
+        {code}
+      </SyntaxHighlighter>
+      <TextInput style={[styles.codeInputOutput, styles.codeInput]}
       placeholder='Type to start coding!'
       onChangeText={newCode => setCode(newCode)}
       autoCapitalize='none'
@@ -19,36 +22,37 @@ const EditorContainer = ({ language }) => { // { synHighlight }
       textAlignVertical='top'
       defaultValue={code}
       />
-      <SyntaxHighlighter language={language} highlighter="hljs" style={[docco, styles.codeInputOutput]} customStyle={styles.codeOutputOnly}>
-        {code}
-      </SyntaxHighlighter>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   editorWindow: {
-    marginLeft: 12,
-    marginRight: 12,
-    marginTop: 12,
-    marginBottom: 12,
-    borderWidth: 1,
+    margin: 12,
+    borderWidth: 1.5,
     borderRadius: 4,
+    minHeight: 46, // TODO change hardcoded minimum height of editor window
     // backgroundColor: "red",
   },
+
+  codeInput: {
+    // padding: 8
+  },
+  
   codeInputOutput: {
+    // backgroundColor: "red",
     // backgroundColor: "#fff",
-    // position: "absolute",
-    paddingLeft: 8,
-    paddingRight: 8,
-    paddingTop: 6,
-    paddingBottom: 6,
+    position: "absolute",
+    padding: 8,
     borderRadius: 4,
     fontFamily: Platform.OS === 'ios' ? 'Menlo-Regular' : 'monospace',
     fontSize: 12,
+    display: "flex",
+    // line spacing to match that of the SyntaxHighlighterComponent here???
   },
-  codeOutputOnly: {
-    backgroundColor:"red"
+
+  codeOutput: {
+    // padding: 8
   }
 })
 
